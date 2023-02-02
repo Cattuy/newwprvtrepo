@@ -9,33 +9,59 @@ if os.path.exists("Internal"):
 # VARS
 
 get_queue = {}
-BOT_TOKEN = getenv("BOT_TOKEN", ""))
 API_ID = int(getenv("API_ID", ""))
-API_HASH = getenv("API_HASH", ""))
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "300"))
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://guri:guri@cluster0.8ega1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"))
-SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5034422341").split()))
-OWNER_ID = list(map(int, getenv("OWNER_ID", "").split()))
+API_HASH = getenv("API_HASH")
+
+## Get it from @Botfather in Telegram.
+BOT_TOKEN = getenv("BOT_TOKEN")
+
+# Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
+MONGO_DB_URI = getenv("MONGO_DB_URI", None)
+
+# Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
+DURATION_LIMIT_MIN = int(
+    getenv("DURATION_LIMIT", "60")
+)  # Remember to give value in Minutes
+
+# Duration Limit for downloading Songs in MP3 or MP4 format from bot
+SONG_DOWNLOAD_DURATION = int(
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180")
+)  # Remember to give value in Minutes
+
+# You'll need a Private Group ID for this.
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
-MUSIC_BOT_NAME = getenv(""))
+
+# A name for your Music bot.
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
+
+# Your User ID.
+OWNER_ID = list(
+    map(int, getenv("OWNER_ID", "").split())
+)  # Input type must be interger
+
+# Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
+
+# You have to Enter the app name which you gave to identify your  Music Bot in Heroku.
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
+# For customized or modified Repository
 UPSTREAM_REPO = getenv(
-    "UPSTREAM_REPO", "https://github.com/Shailendra34/Hero-OP"
+    "UPSTREAM_REPO",
+    "https://github.com/TeamYukki/YukkiMusicBot",
 )
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
-if str(getenv("SUPPORT_CHANNEL")).strip() == "":
-    SUPPORT_CHANNEL = None
-else:
-    SUPPORT_CHANNEL = str(getenv("SUPPORT_CHANNEL"))
-if str(getenv("SUPPORT_GROUP")).strip() == "":
-    SUPPORT_GROUP = None
-else:
-    SUPPORT_GROUP = str(getenv("SUPPORT_GROUP"))
+# GIT TOKEN ( if your edited repo is private)
+GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-
+# Only  Links formats are  accepted for this Var value.
+SUPPORT_CHANNEL = getenv(
+    "SUPPORT_CHANNEL", None
+)  # Example:- https://t.me/TheYukki
+SUPPORT_GROUP = getenv(
+    "SUPPORT_GROUP", None
+)  # Example:- https://t.me/YukkiSupport
 if str(getenv("STRING_SESSION1")).strip() == "":
     STRING1 = str(None)
 else:
