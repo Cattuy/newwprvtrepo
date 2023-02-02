@@ -9,15 +9,15 @@ if os.path.exists("Internal"):
 # VARS
 
 get_queue = {}
-BOT_TOKEN = getenv("BOT_TOKEN", "5097632527:AAEyKN7goIl0lupYgQVqJJH1ghg4fT6wdk0"))
-API_ID = int(getenv("API_ID", "8192152"))
-API_HASH = getenv("API_HASH", "2931e14598cd0f0763236bc84ee4bd6d"))
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "900"))
+BOT_TOKEN = getenv("BOT_TOKEN", ""))
+API_ID = int(getenv("API_ID", ""))
+API_HASH = getenv("API_HASH", ""))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "300"))
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://guri:guri@cluster0.8ega1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"))
 SUDO_USERS = list(map(int, getenv("SUDO_USERS", "5034422341").split()))
-OWNER_ID = list(map(int, getenv("OWNER_ID", "5034422341").split()))
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001686049931"))
-MUSIC_BOT_NAME = getenv("Romeo"))
+OWNER_ID = list(map(int, getenv("OWNER_ID", "").split()))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
+MUSIC_BOT_NAME = getenv(""))
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
