@@ -35,7 +35,7 @@ LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
 MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
 
 # Your User ID.
-OWNER_ID = list(
+SUDO_USERS = list(
     map(int, getenv("OWNER_ID", "").split())
 )  # Input type must be interger
 
